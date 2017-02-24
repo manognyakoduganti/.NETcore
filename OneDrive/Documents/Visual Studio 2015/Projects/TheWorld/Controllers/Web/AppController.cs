@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TheWorld.Models;
 using TheWorld.Services;
 using TheWorld.ViewModels;
 
@@ -15,23 +16,27 @@ namespace TheWorld.Controllers.Web
     {
         private IMailService _mailService;
         private IConfigurationRoot _config;
+        private WorldContext _context;
 
         // mail service injection through constructor-- uses mailservice interface
         // get config from constructor but store in class level to use it
-        public AppController(IMailService mailService, IConfigurationRoot config)
+        public AppController(IMailService mailService, IConfigurationRoot config, WorldContext context)
         {
             _mailService = mailService;
             _config = config;
+            _context = context;
         }
         //IActionResult--> outputs different kinds of result
         
         public IActionResult Index()
         {
-           
+            //convert all trips to list and send it to view
+            //
+            var data = _context.Trips.ToList();
                // throw new InvalidOperationException("bad things happen to good developers");
 
             // all views in App(name of controller) and name of file matches action(Index here)
-            return View();
+            return View(data);
         }
 
         public IActionResult Contact()
