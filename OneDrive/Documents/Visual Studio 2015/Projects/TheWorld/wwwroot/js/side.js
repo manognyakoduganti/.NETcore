@@ -36,5 +36,5 @@
             $icon.addClass("fa-angle-left");
             $icon.removeClass("fa-angle-right");
         }
-    })
+    });
 })();
