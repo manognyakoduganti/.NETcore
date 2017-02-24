@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v1.0",
-    "signature": "4d93e9bf88b2459b1ebdc74807fba19b959a3122"
+    "signature": "accdce3397b09efb8d0cc2bc84c9b0c60730d4cc"
   },
   "compilationOptions": {
     "defines": [
@@ -22,7 +22,9 @@
           "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-rc2-final",
-          "Microsoft.NETCore.App": "1.0.0-rc2-3002702"
+          "Microsoft.NETCore.App": "1.0.0-rc2-3002702",
+          "Microsoft.Extensions.Configuration.Json": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-rc2-final"
         },
         "runtime": {
           "TheWorld.dll": {}
@@ -867,6 +869,46 @@
         },
         "compile": {
           "lib/netstandard1.0/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.EnvironmentVariables/1.0.0-rc2-final": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.0.0-rc2-final"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.EnvironmentVariables.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.FileExtensions/1.0.0-rc2-final": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.0.0-rc2-final",
+          "Microsoft.Extensions.FileProviders.Physical": "1.0.0-rc2-final",
+          "System.AppContext": "4.1.0-rc2-24027"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.FileExtensions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Json/1.0.0-rc2-final": {
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0-rc2-final",
+          "Newtonsoft.Json": "8.0.3",
+          "System.Dynamic.Runtime": "4.0.11-rc2-24027",
+          "System.IO.FileSystem": "4.0.1-rc2-24027",
+          "System.Runtime.Serialization.Primitives": "4.1.1-rc2-24027"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.Extensions.Configuration.Json.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/1.0.0-rc2-final": {
@@ -3121,6 +3163,21 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-V3R/6yGrJXrNSObyPizdwA4i5L4IsJ9s3wLeEY1nLEVHaItzXJQX+7lU+b7KAkPQrNT0m9Z1Yr74fcg0pHyoUg=="
+    },
+    "Microsoft.Extensions.Configuration.EnvironmentVariables/1.0.0-rc2-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yIT43LuJRSVtSRdO+uuUrsyNZCA/qWg3sqBQs2zW64SUZKeLqncFa5bZz8FlCFelNjoTKEpHEhe3pQNuI3STlw=="
+    },
+    "Microsoft.Extensions.Configuration.FileExtensions/1.0.0-rc2-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ry1KQP2nv459lAiY2EsQ7i35u8XgD0ZMMgrvzGr9QlReXW8XWj5WLE2xuu7To3oFQIvCnDtZtZsr7dJ05KHr1Q=="
+    },
+    "Microsoft.Extensions.Configuration.Json/1.0.0-rc2-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Y/3qSjHpuaLeyja+gSAZUtdj503tbc23699YzE8DxWMZ3urDztdpdWy0CFGGES15obfmsrm+oBxzEwtiHKPTw=="
     },
     "Microsoft.Extensions.DependencyInjection/1.0.0-rc2-final": {
       "type": "package",
